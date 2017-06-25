@@ -338,7 +338,8 @@ video{
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
      #Text{
-	   font-size:0.5em;
+	   font-size:0.8em;
+	   padding-right:10px;
    }
    #Text2{
 	   font-size:0.5em;
@@ -363,7 +364,7 @@ video{
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
      #Text{
-	   font-size:0.9em;
+	   font-size:1em;
    }
    #Text2{
 	   font-size:1em;
@@ -388,7 +389,7 @@ video{
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
    #Text{
-	   font-size:1.3em;
+	   font-size:1em;
    }
    #Text2{
 	   font-size:1.3em;
@@ -443,7 +444,5 @@ video{
    #vtext{
 	   visibility:visible;
    }
-   #vtext2{
-	transform: rotate(270deg);
-}
+   
 }
