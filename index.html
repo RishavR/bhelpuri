@@ -29,9 +29,16 @@
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.1/normalize.css">
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	   <script src='https://prinzhorn.github.io/skrollr/dist/skrollr.min.js'></script>
    <script src="js/src/skrollr.decks.js"></script>
-   <script>
+   
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body class="skrollr-decks-init" data-skrollr-decks-history="true">
+	<script>
 
 	document.querySelector('.main-nav').addEventListener('click', function (e) {
 		var el = e.target;
@@ -42,13 +49,8 @@
 
 		e.preventDefault();
 	}, false);
-
-</script>
-  </head>
-<!-- NAVBAR
-================================================== -->
-  <body class="skrollr-decks-init" data-skrollr-decks-history="true">
-		  
+	
+</script>	  
   <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
@@ -67,24 +69,26 @@
 }(document, "script", "twitter-wjs"));
 
 $(document).ready(function(){
-      if ($(window).width() > 768) {
-          var s = skrollr.init()
-      }
+				$('.carousel').css("height",$(window).height());
+				$('.carousel').css("width",$(window).width());
+				$('.item').css("height",$(window).height());
+				$('.item').css("width",$(window).width());
+      
     });
 </script>
 
     <div class="navbar-wrapper">
-      <div class="container">
+     
 
-        <nav class="navbar">
-          <div class="container">
+        <nav class="navbar" style="margin:0;padding:0">
+          
             <div class="navbar-header">
-              <a class="navbar-brand" href="#"><img class="responsive" width="160" height="176" src="BLogo.png"/></a>
+              <a class="navbar-brand" href="#"><img class="responsive" width="160" height="176" src="BLogo.png"/ style="margin-top:30%;margin-left:50%;"></a>
 		  </div>
-          </div>
+         
         </nav>
 
-      </div>
+     
     </div>
 	<section class="float-deck" style="background:#e6e6e6;"
 			data-anchor-target="#third" data-smooth-scrolling="off"
@@ -155,27 +159,22 @@ $(document).ready(function(){
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8" style="Margin-top:30px;">
+        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8" style="Margin-top:30px;z-index:5000">
           <img class="img-responsive" src="Bhelvetica-logo.png" alt="Generic placeholder image">
          <p id="Text">It’s what you get when Bollywood has a dirty, one-nighter with Helvetica and does not use protection.</p>
 		 <p id="Text" style="margin-top:-60px">Bhelvetica is that lovechild. All grown up, she's looking hot as ever. But be warned, she comes with some serious daddy issues.</p>
           </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-          <img class="img-responsive" src="stripes.png" alt="Generic placeholder image" style="display:inline" >
-		  
-		 <a id="vtext2" href="#myCarousel" >Watch that clip again</a>
-		 
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
-			<nav>
-				<ul style="list-style-type: none;">
+      
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-3 pull-right" >
+			
+				<ul style="list-style-type: none;margin-top:70%">
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav1">1990-1995</a></li>
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav2">1996-2000</a></li>
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav3">2001-2006</a></li>
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav4">2006-2011</a></li>
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav5">2011-</a></li>
 				</ul>
-           </nav>
+           
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
   </div>
@@ -198,7 +197,7 @@ $(document).ready(function(){
 						Your browser does not support the audio element.
 				</audio>
           <div class="container">
-            <div class="carousel-caption">
+            <div class="carousel-caption" style="transform:translateX(50%)">
               <h1 id="vtext"> <- Neeche Phulon ki dukaan </h1>
             </div>
           </div>
@@ -578,7 +577,6 @@ $(document).ready(function(){
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
