@@ -98,28 +98,28 @@ $(document).ready(function(){
 	    <div class="container marketing" >
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
+      <div class="row" style="z-index:+100">
         <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3">
 		   <img class="img-responsive" src="BLogo.png" width="200" height="200"/>
 		<nav>
 		   <ul style="list-style-type: none;text-align:left">
-					<li><section data-anchor-target="#scrollnav1" data-smooth-scrolling="off"
-			data-bottom-bottom="opacity:0;"
+					<li><section data-anchor-target="#scrollnav1" data-smooth-scrolling="on"
+			data-bottom-bottom="opacity:0.5;"
 			data-top-bottom="opacity: 1">
 	    <a id="Text2" style="color:#595959">1990-1995</a></section></li>
 		
-					<li><section data-anchor-target="#scrollnav2" data-smooth-scrolling="off"
-			data-bottom-bottom="opacity:0;"
+					<li><section data-anchor-target="#scrollnav2" data-smooth-scrolling="on"
+			data-bottom-bottom="opacity:0.5;"
 			data-top-bottom="opacity: 1"><a id="Text2" style="color:#595959" href="#scrollnav2">1996-2000</a></section></li>
 					<li><section data-anchor-target="#scrollnav3" data-smooth-scrolling="off"
-			data-bottom-bottom="opacity:0;"
+			data-bottom-bottom="opacity:0.5;"
 			data-top-bottom="opacity: 1;color:black;"><p id="Text2" style="color:#595959" href="#scrollnav3">2001-2006</p></section></li>
 					<li><section data-anchor-target="#scrollnav4" data-smooth-scrolling="off"
-			data-bottom-bottom="opacity:0;"
-			data-top-bottom="opacity: 1;color:black;"><p id="Text2" style="color:#595959" href="#scrollnav3">2006-2011</p></section></li>
+			data-bottom-bottom="opacity:0.5;"
+			data-top-bottom="opacity: 1;color:black;"><p id="Text2" style="color:#595959;margin-top:-5px" href="#scrollnav3">2006-2011</p></section></li>
 					<li><section data-anchor-target="#scrollnav5" data-smooth-scrolling="off"
-			data-bottom-bottom="opacity:0;"
-			data-top-bottom="opacity: 1"><p id="Text2" style="color:#595959" href="#scrollnav5">2011-</p></section></li>
+			data-bottom-bottom="opacity:0.5;"
+			data-top-bottom="opacity: 1;z-index:+100"><p id="Text2" style="color:#595959" href="#scrollnav5">2011-</p></section></li>
 				</ul>
 		</nav>
         </div><!-- /.col-lg-4 -->
@@ -161,18 +161,18 @@ $(document).ready(function(){
       <div class="row">
         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8" style="Margin-top:30px;z-index:5000">
           <img class="img-responsive" src="Bhelvetica-logo.png" alt="Generic placeholder image">
-         <p id="Text">It’s what you get when Bollywood has a dirty, one-nighter with Helvetica and does not use protection.</p>
+         <p id="Text" >It’s what you get when Bollywood has a dirty, one-nighter with Helvetica and does not use protection.</p>
 		 <p id="Text" style="margin-top:-60px">Bhelvetica is that lovechild. All grown up, she's looking hot as ever. But be warned, she comes with some serious daddy issues.</p>
           </div><!-- /.col-lg-4 -->
       
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-3 pull-right" >
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-4 pull-right" >
 			
-				<ul style="list-style-type: none;margin-top:70%">
+				<ul style="list-style-type: none;margin-top:70%;padding-right:20%" class="pull-right">
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav1">1990-1995</a></li>
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav2">1996-2000</a></li>
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav3">2001-2006</a></li>
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav4">2006-2011</a></li>
-					<li><a id="Text2" style="color:#ff9966" href="#scrollnav5">2011-</a></li>
+					<li><a id="Text2" style="color:#ff9966" href="#scrollnav5">2011-2014</a></li>
 				</ul>
            
         </div><!-- /.col-lg-4 -->
@@ -198,7 +198,7 @@ $(document).ready(function(){
 				</audio>
           <div class="container">
             <div class="carousel-caption" style="transform:translateX(50%)">
-              <h1 id="vtext"> <- Neeche Phulon ki dukaan </h1>
+              <h1 id="vtext"> <- Neeche Phoolon ki dukaan </h1>
             </div>
           </div>
         </div>
@@ -313,7 +313,7 @@ $(document).ready(function(){
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<img class="img-responsive" src="Posters/Posters/Bhelvetica-33.png" width="480" height="640"/>
 						</div>  <Br><Br><Br>
-						<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="z-index:100;" id="visbox2" >
+						<!--<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="z-index:100;" id="visbox2" >
 							<a class="twitter-follow-button" href="https://twitter.com/urban_vikas"data-size="small"> Follow @TwitterDev</a> 
 							<a class="fb-share-button"  data-href="http://www.your-domain.com/your-page.html" data-layout="button_count"></a>
 							<p style="font-family:CMR;text-align:left" id="special"> Have a song or line you'd like us to do? Or just want to say hi? Do it.</p> <button type="button" action="mailto:urbanvikas@gmail.com" class="Butn btn btn btn-lg">Write In.</button>
@@ -343,16 +343,22 @@ $(document).ready(function(){
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
-          <img class="img-responsive" src="Bhelvetica-logo.png" alt="Generic placeholder image">
+        <div class="col-lg-3">
+          <img class="img-responsive" src="Bhelvetica-logo.png" alt="Generic placeholder image" style="margin-top:5%">
           </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-responsive" src="Progress Person.png" alt="Generic placeholder image" width="100" height="100" align="center" style="margin-left:40%">
+		  
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+		</div>
+        <div class="col-lg-3" style="margin-left:4%">
+          <img class="img-responsive" src="Progress Person.png" alt="Generic placeholder image" width="100" height="100" align="center" style="margin-left:40%;margin-top:5%">
 		  <p style="font-family:CMR;text-align:center;color:white">Urban Vikas Yojana</p>
 		  <p style="font-family:CMR;text-align:center;color:white"><a href="https://www.instagram.com/urbanvikas/">Instagram</a>|<a href="https://twitter.com/urban_vikas">Twitter</a>|<a href="https://www.facebook.com/urbanvikas">Facebook</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4" >
-			 <img class="img-responsive" src="naidu-panjabi.png" alt="Generic placeholder image"align="center" style="margin-top:15%;margin-left:25%">
+		
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+		</div>
+        <div class="col-lg-3 pull-right">
+			 <img class="img-responsive" src="naidu-panjabi.png" width="200" height="200" alt="Generic placeholder image"align="center" style="margin-top:5%;margin-left:10%">
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
   </div>
@@ -539,7 +545,7 @@ $(document).ready(function(){
 			
 			<button type="button" class="Butn btn btn btn-lg" style="margin-bottom:10%;">Sign Up!</button>
 			
-        </div><!-- /.col-lg-4 -->
+					</div><!-- /.col-lg-4 -->
 			</div>
         </div>
       </div><!-- /.row -->
@@ -548,17 +554,19 @@ $(document).ready(function(){
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
-          <img class="img-responsive" src="Bhelvetica-logo.png" alt="Generic placeholder image">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <img class="img responsive" src="Bhelvetica-logo.png" alt="Generic placeholder image">
           </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-responsive" src="Progress Person.png" alt="Generic placeholder image" width="100" height="100" align="center" style="margin-left:40%">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <img class="img responsive" src="Progress Person.png" alt="Generic placeholder image" width="100" height="100" align="center" style="margin-left:40%">
 		  <p style="font-family:CMR;text-align:center;color:white">Urban Vikas Yojana</p>
 		  <p style="font-family:CMR;text-align:center;color:white"><a href="https://www.instagram.com/urbanvikas/">Instagram</a>|<a href="https://twitter.com/urban_vikas">Twitter</a>|<a href="https://www.facebook.com/urbanvikas">Facebook</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4" >
-			 <img class="img-responsive" src="naidu-panjabi.png" alt="Generic placeholder image"align="center" style="margin-top:15%;margin-left:18%">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" >
+			 <img class="img responsive" src="naidu-panjabi.png" alt="Generic placeholder image"  style="margin-top:15%;" width="100" height="100">
         </div><!-- /.col-lg-4 -->
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+		</div>
       </div><!-- /.row -->
   </div>
     <!-- /.container -->

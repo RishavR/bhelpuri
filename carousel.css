@@ -13,7 +13,7 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
-  background:#ff6666;
+  background:#ffffff;
 }
 #non-skrollr{
 	background:#e6e6e6;
@@ -251,17 +251,15 @@ box-shadow: 10px 10px 252px -23px rgba(0,0,0,0.64);
 }
  #Text{
 	 font-family: Georgia;
-	 font-size: 2.0em;
-	 font-weight:bolder;
+	 font-size: 1em;
 	 padding:30px;
-	 padding-right:140px;
+	 margin-right:50px;
 	 padding-left:50px;
 	 text-align:left;
  }
   #Text2{
 	 font-family: Georgia;
-	 font-size: 2.3em;
-	 font-weight:bolder;
+	 font-size: 1em;
 	 text-align:left;
 	 margin-left:-30px;
  }
@@ -422,7 +420,7 @@ video{
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
    #Text{
-	   font-size:1em;
+	   font-size:1.3em;
    }
    #Text2{
 	   font-size:1.3em;
@@ -482,10 +480,10 @@ video{
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
         #Text{
-	   font-size:2.0em;
+	   font-size:1.8em;
    }
    #Text2{
-	   font-size:2.3em;
+	   font-size:1.6em;
    }
    #special{
 	   font-size:1em;
