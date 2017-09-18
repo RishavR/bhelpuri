@@ -29,11 +29,16 @@
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.1/normalize.css">
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	   <script src='https://prinzhorn.github.io/skrollr/dist/skrollr.min.js'></script>
    <script src="js/src/skrollr.decks.js"></script>
-   
+   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script type="text/javascript">
+   (function(){
+      emailjs.init("user_yAs21k3HOOsuF7wVh9k0a");
+   })();
+	</script>
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -49,7 +54,6 @@
 
 		e.preventDefault();
 	}, false);
-	
 </script>	  
   <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
@@ -77,13 +81,13 @@ $(document).ready(function(){
     });
 </script>
 
-    <div class="navbar-wrapper">
+    <div class="navbar-wrapper" style="z-index:+300">
      
 
         <nav class="navbar" style="margin:0;padding:0">
           
             <div class="navbar-header">
-              <a class="navbar-brand" href="#"><img class="responsive" width="160" height="176" src="BLogo.png"/ style="margin-top:30%;margin-left:50%;"></a>
+              <a class="navbar-brand" href="#"><img class="responsive" width="160" height="176" src="BLogo.png" style="margin-top:30%;margin-left:50%;"></a>
 		  </div>
          
         </nav>
@@ -92,9 +96,9 @@ $(document).ready(function(){
     </div>
 	<section class="float-deck" style="background:#e6e6e6;"
 			data-anchor-target="#third" data-smooth-scrolling="off"
-			data-bottom-bottom="opacity:1;transform: translateY(0%);"
+			data-bottom-bottom="opacity:1;transform: translateY(0%);z-index:+200"
 			data-300-end="opacity:1;"data-end="opacity:0;"
-			data-top-bottom="opacity:1;transform: translateY(0%);">
+			data-top-bottom="opacity:1;transform: translateY(0%);z-index:+200">
 	    <div class="container marketing" >
 
       <!-- Three columns of text below the carousel -->
@@ -103,23 +107,23 @@ $(document).ready(function(){
 		   <img class="img-responsive" src="BLogo.png" width="200" height="200"/>
 		<nav>
 		   <ul style="list-style-type: none;text-align:left">
-					<li><section data-anchor-target="#scrollnav1" data-smooth-scrolling="on"
+					<li><section data-anchor-target="#scrollnav1" data-smooth-scrolling="off"
 			data-bottom-bottom="opacity:0.5;"
 			data-top-bottom="opacity: 1">
-	    <a id="Text2" style="color:#595959">1990-1995</a></section></li>
+	    <a id="Text2" style="color:#595959" href="#scrollnav1">1990-1995</a></section></li>
 		
-					<li><section data-anchor-target="#scrollnav2" data-smooth-scrolling="on"
+					<li><section data-anchor-target="#scrollnav2" data-smooth-scrolling="off"
 			data-bottom-bottom="opacity:0.5;"
 			data-top-bottom="opacity: 1"><a id="Text2" style="color:#595959" href="#scrollnav2">1996-2000</a></section></li>
 					<li><section data-anchor-target="#scrollnav3" data-smooth-scrolling="off"
 			data-bottom-bottom="opacity:0.5;"
-			data-top-bottom="opacity: 1;color:black;"><p id="Text2" style="color:#595959" href="#scrollnav3">2001-2006</p></section></li>
+			data-top-bottom="opacity: 1;color:black;"><a id="Text2" style="color:#595959" href="#scrollnav3">2001-2006</a></section></li>
 					<li><section data-anchor-target="#scrollnav4" data-smooth-scrolling="off"
 			data-bottom-bottom="opacity:0.5;"
-			data-top-bottom="opacity: 1;color:black;"><p id="Text2" style="color:#595959;margin-top:-5px" href="#scrollnav3">2006-2011</p></section></li>
+			data-top-bottom="opacity: 1;color:black;"><a id="Text2" style="color:#595959;margin-top:-5px" href="#scrollnav4">2006-2011</a></section></li>
 					<li><section data-anchor-target="#scrollnav5" data-smooth-scrolling="off"
 			data-bottom-bottom="opacity:0.5;"
-			data-top-bottom="opacity: 1;z-index:+100"><p id="Text2" style="color:#595959" href="#scrollnav5">2011-</p></section></li>
+			data-top-bottom="opacity: 1;z-index:+100"><a id="Text2" style="color:#595959" href="#scrollnav5">2011-</a></section></li>
 				</ul>
 		</nav>
         </div><!-- /.col-lg-4 -->
@@ -134,18 +138,18 @@ $(document).ready(function(){
         <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2" style="z-index:100;" id="visbox1" >
 		<a class="twitter-follow-button" href="https://twitter.com/urban_vikas"data-size="small"> Follow @TwitterDev</a> 
         <div class="fb-share-button"  data-href="http://www.your-domain.com/your-page.html" data-layout="button_count"></div>
-		 <p style="font-family:CMR;text-align:left" id="special"> Have a song or line you'd like us to do? Or just want to say hi? Do it.</p> <button type="button" class="Butn btn btn btn-lg">Write In.</button>
+		 <p style="font-family:CMR;text-align:left" id="special"> Have a song or line you'd like us to do? Or just want to say hi? Do it.</p> <button type="button" class="Butn btn btn btn-lg" id="WRITE">Write In.</button>
 			
 		<p style="font-family:CMR;text-align:left" id="special">Find out first. Sign up for inside deals on merch + freebies. Do it.</p> 
 			<form>
 				<div class="form-group">
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name"><Br>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+					<input type="email" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Name"><Br>
+					<input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Email">
 				
 				</div>
 			</form>
 			
-			<button type="button" class="Butn btn btn btn-lg">Sign Up!</button>
+			<button type="button" class="Butn btn btn btn-lg" id="SIGNUP">Sign Up!</button>
 			
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
@@ -153,8 +157,8 @@ $(document).ready(function(){
 	</section>
    <section class="float-deck" style="background:#e6e6e6;"
 			data-anchor-target="#second" data-smooth-scrolling="off"
-			data-bottom-bottom="transform: translateY(0%);"
-			data-top-bottom="transform: translateY(-110%);">
+			data-bottom-bottom="transform: translateY(0%);z-index:+200"
+			data-top-bottom="transform: translateY(-110%);z-index:+200" id="AUDIOSTOPPER">
 	    <div class="container marketing" >
 
       <!-- Three columns of text below the carousel -->
@@ -182,7 +186,7 @@ $(document).ready(function(){
  <main id="skrollr-body">
     <!-- Carousel
     ================================================== -->
-   <section class="skrollr-deck" data-bottom-bottom="visibility:visible;" data-top-bottom="visibility:hidden;">
+   <section class="skrollr-deck" data-smooth-scrolling="on" data-bottom-bottom="z-index:+200" data-top-bottom="z-index:+200" id="VID">
     <div  class="carousel slide" id="myCarousel"  data-ride="carousel" >
       <!-- Indicators -->
       <div class="carousel-inner" role="listbox">
@@ -192,7 +196,7 @@ $(document).ready(function(){
 					<source src="discofighter.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 				</video> 
-				<audio autoplay loop>
+				<audio autoplay loop id="AUDIO">
 					<source src="bckgrnd.mp3" type="audio/mp3">
 						Your browser does not support the audio element.
 				</audio>
@@ -212,16 +216,14 @@ $(document).ready(function(){
  <section class="skrollr-deck float-void" id="second"> </section>
   <section class="skrollr-deck float-void" id="third"> </section>
       <!-- START THE FEATURETTES -->
-  <section class="skrollr-deck">
-      <div class="container marketing" style="box-shadow:none;z-index:90" >
+  <section class="skrollr-deck col-lg-7 col-lg-offset-3 col-md-7 col-lg-offset-3 col-sm-7 col-sm-offset-3 col-xs-7 col-xs-offset-3" style="z-index:+200">
+      <div class="container marketing" style="box-shadow:none;z-index:+200" >
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-		 
-		   </div><!-- /.col-lg-4 -->
-        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+
+        <div>
             <div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"  >
 						<img class="img-responsive" id="scrollnav1" src="Posters/Posters/Bhelvetica-01.png" width="540" height="768"/>
 						</div>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -343,13 +345,13 @@ $(document).ready(function(){
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
           <img class="img-responsive" src="Bhelvetica-logo.png" alt="Generic placeholder image" style="margin-top:5%">
           </div><!-- /.col-lg-4 -->
 		  
 		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 		</div>
-        <div class="col-lg-3" style="margin-left:4%">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-left:4%">
           <img class="img-responsive" src="Progress Person.png" alt="Generic placeholder image" width="100" height="100" align="center" style="margin-left:40%;margin-top:5%">
 		  <p style="font-family:CMR;text-align:center;color:white">Urban Vikas Yojana</p>
 		  <p style="font-family:CMR;text-align:center;color:white"><a href="https://www.instagram.com/urbanvikas/">Instagram</a>|<a href="https://twitter.com/urban_vikas">Twitter</a>|<a href="https://www.facebook.com/urbanvikas">Facebook</a></p>
@@ -357,7 +359,7 @@ $(document).ready(function(){
 		
 		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 		</div>
-        <div class="col-lg-3 pull-right">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pull-right">
 			 <img class="img-responsive" src="naidu-panjabi.png" width="200" height="200" alt="Generic placeholder image"align="center" style="margin-top:5%;margin-left:10%">
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
@@ -389,13 +391,7 @@ $(document).ready(function(){
          <p id="Text" >It’s what you get when Bollywood has a dirty, one-nighter with Helvetica and does not use protection.</p>
 		 <p id="Text" style="margin-top:-60px">Bhelvetica is that lovechild. All grown up, she's looking hot as ever. But be warned, she comes with some serious daddy issues.</p>
           </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-          <img class="img-responsive" src="stripes.png" alt="Generic placeholder image" style="display:inline" >
-		  
-		 <a id="vtext2" href="#myCarousel" >Watch that clip again</a>
-		 
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pull-right" style="margin-top:30%">
 			<nav>
 				<ul style="list-style-type: none;">
 					<li><a id="Text2" style="color:#ff9966" href="#scrollnav1">1990-1995</a></li>
@@ -420,14 +416,14 @@ $(document).ready(function(){
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
-						<img class="img-responsive" id="scrollnav1" src="BLogo.png" width="50" height="50" style="display:inline;"/>
+						<img class="img-responsive" id="scrollnav1" src="BLogo.png" width="100" height="100" style="display:inline;"/>
 						<p id="Text3" style="color:#ff9966">1990-1995</p>
 						</div>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
-						<img class="img-responsive" id="scrollnav1" src="Posters/Posters/Bhelvetica-01.png" width="540" height="768"/>
+						<img class="img-responsive" id="scrollnav1" src="Posters/Posters/Bhelvetica-01.png" width="480" height="640"/>
 						</div>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<img class="img-responsive" src="Posters/Posters/Bhelvetica-02.png" width="540" height="768"/>
+						<img class="img-responsive" src="Posters/Posters/Bhelvetica-02.png" width="480" height="640"/>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<img class="img-responsive" src="Posters/Posters/Bhelvetica-03.png" width="480" height="640"/>
@@ -436,7 +432,7 @@ $(document).ready(function(){
 						<img class="img-responsive" src="Posters/Posters/Bhelvetica-04.png" width="480" height="640"/>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
-						<img class="img-responsive" id="scrollnav1" src="BLogo.png" width="50" height="50" style="display:inline;"/>
+						<img class="img-responsive" id="scrollnav1" src="BLogo.png" width="100" height="100" style="display:inline;"/>
 							<p id="Text3" style="color:#ff9966">1996-2000</p>
 						</div>
 
@@ -485,7 +481,7 @@ $(document).ready(function(){
 						<img class="img-responsive" src="Posters/Posters/Bhelvetica19.png" width="480" height="640"/>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
-						<img class="img-responsive" id="scrollnav1" src="BLogo.png" width="50" height="50" style="display:inline;"/>
+						<img class="img-responsive" id="scrollnav1" src="BLogo.png" width="100" height="100" style="display:inline;"/>
 							<p id="Text3" style="color:#ff9966">2006-2011</p>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -508,7 +504,7 @@ $(document).ready(function(){
 						<img class="img-responsive" src="Posters/Posters/Bhelvetica-25.png" width="480" height="640"/>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
-						<img class="img-responsive" id="scrollnav1" src="BLogo.png" width="50" height="50" style="display:inline;"/>
+						<img class="img-responsive" id="scrollnav1" src="BLogo.png" width="100" height="100" style="display:inline;"/>
 							<p id="Text3" style="color:#ff9966">2011-</p>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="scrollnav5">
@@ -532,18 +528,18 @@ $(document).ready(function(){
 						<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="z-index:100;" id="visbox2" >
 							<a class="twitter-follow-button" href="https://twitter.com/urban_vikas"data-size="small"> Follow @TwitterDev</a> 
 							<a class="fb-share-button"  data-href="http://www.your-domain.com/your-page.html" data-layout="button_count"></a>
-							<p style="font-family:CMR;text-align:left" id="special"> Have a song or line you'd like us to do? Or just want to say hi? Do it.</p> <button type="button" action="mailto:urbanvikas@gmail.com" class="Butn btn btn btn-lg">Write In.</button>
+							<p style="font-family:CMR;text-align:left" id="special"> Have a song or line you'd like us to do? Or just want to say hi? Do it.</p> <button type="button" action="mailto:urbanvikas@gmail.com" class="Butn btn btn btn-lg" id="WRITE">Write In.</button>
 			
 								<p style="font-family:CMR;text-align:left" id="special">Find out first. Sign up for inside deals on merch + freebies. Do it.</p> 
 							<form>
 						<div class="form-group">
-							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name"><Br>
-							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+							<input type="email" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Name"><Br>
+							<input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Email">
 				
 					</div>
 				</form>
 			
-			<button type="button" class="Butn btn btn btn-lg" style="margin-bottom:10%;">Sign Up!</button>
+			<button type="button" class="Butn btn btn btn-lg" style="margin-bottom:10%;" id="SIGNUP">Sign Up!</button>
 			
 					</div><!-- /.col-lg-4 -->
 			</div>
@@ -555,7 +551,7 @@ $(document).ready(function(){
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-          <img class="img responsive" src="Bhelvetica-logo.png" alt="Generic placeholder image">
+          <img class="img responsive" src="Bhelvetica-logo.png" alt="Generic placeholder image" width="300" height="100">
           </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
           <img class="img responsive" src="Progress Person.png" alt="Generic placeholder image" width="100" height="100" align="center" style="margin-left:40%">
@@ -570,16 +566,70 @@ $(document).ready(function(){
       </div><!-- /.row -->
   </div>
     <!-- /.container -->
-  <!-- <script type="text/javascript">
+  <<script type="text/javascript">
 			$(document).ready(function(){
-		$('.carousel').css('height', $(window).height());
-		// Comma, not colon ----^
+			 $('#VID').on("mousewheel", function() {
+				document.getElementById('AUDIO').muted =false;
+			});
+			 $('#AUDIOSTOPPER').on("mousewheel", function() {
+				document.getElementById('AUDIO').muted = true;
+			});
+			$('#second').on("mousewheel", function() {
+				document.getElementById('AUDIO').muted = true;
+			});
+			$('#third').on("mousewheel", function() {
+				document.getElementById('AUDIO').muted = true;
+			});
+			$('#fourth').on("mousewheel", function() {
+				document.getElementById('AUDIO').muted = true;
+			});
+			$('#first').on("mousewheel", function() {
+				document.getElementById('AUDIO').muted = true;
+			});
+		       $('#SIGNUP').click(function(){
+			   if($('#Name').val()!=='' || $('#Email').val()!==''){
+						var nameString=$('#Name').val();
+						var emailString0=$('#Email').val();
+						emailjs.send("default_service","signup",{from_name: nameString , from_email: emailString0});						
+					    $.confirm({
+						theme:'dark',
+						title: 'Success!',
+						content: 'You have been Signed Up!',
 		});
-		$(window).resize(function(){
-		$('.carousel').css('height', $(window).height());
-		// Comma, not colon ----^
+		}
+		else{
+					$.confirm({
+						theme:'dark',
+						title: 'Oops!',
+						content: 'Please fill in all your details properly.',
 		});
-   </script> -->
+		}
+			   });
+			   $('#WRITE').click(function(){
+			   $.confirm({
+						theme:'dark',
+						title: 'Enter Details',
+						content: '<form><div class="form-group"><label for="name">Email:</label><input type="text" class="form-control" id="emailid"></div><div class="form-group"><label for="title">Write In!</label><textarea type="text" class="form-control" id="write-in"/></div></form>',
+					buttons: {
+							confirm: function () {
+								if($('#write-in').val()!=='' && $('#emailid').val()!=='')
+									{
+											var messageString=$('#write-in').val();
+											var emailString=$('#emailid').val();
+											emailjs.send("default_service","writein",{from_name: emailString , message_html: messageString});
+											$.alert({theme:'dark', title:'Success!',content:'Success!'});
+									}
+								else{
+										$.alert({theme:'dark', title:'Error',content:'Please Provide All Details'});
+								}
+						},
+						cancel: function () {
+					}
+				}
+		});
+			   });
+		});
+   </script> 
    
  </body>
     <!-- Bootstrap core JavaScript
@@ -591,6 +641,7 @@ $(document).ready(function(){
     <script src="index_files/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="index_files/ie10-viewport-bug-workaround.js"></script>
-  
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.js"></script>
 
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg></body></html>
